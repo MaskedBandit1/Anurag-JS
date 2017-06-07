@@ -1,0 +1,1678 @@
+/*
+Template Name:Reed | Minimal Personal Template
+Author: codingtheme
+Version: 1.00
+
+Table of Content
+----------------
+
+1.home section
+    1.1 Logo
+    1.2 Main Navbar
+    1.3 Sticky Navbar 
+    1.4 banner area
+2. About Section 
+    2.1 work plan
+3. Services Section
+    3.1 extra services
+4. FunFact Section
+5. Work-Area Section
+6. Testimonial Section
+7. Contact Section
+8. Footer Section
+9. scroll to top animate html  
+*/
+
+/*------------------------------
+        Start Main Rules 
+------------------------------*/
+* {
+	margin: 0px;
+	padding: 0px;
+	outline: 0px;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+a,
+a:hover,
+a:focus {
+	outline: none;
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: 2px;
+	margin: 0px;
+}
+
+h4,
+h5,
+h6 {
+	letter-spacing: 1px;
+	margin: 0px;
+}
+
+p {
+	letter-spacing: 1px;
+	margin: 0px;
+}
+
+button {
+	border: none;
+	margin: 0;
+	padding: 0;
+	letter-spacing: 2px;
+}
+
+img {
+	width: 100%;
+}
+
+.section-padding {
+	padding: 70px 0px;
+}
+
+.section-title {
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.section-title h3 {
+	color: #fff;
+	font-size: 30px;
+	font-weight: bolder;
+	margin: 0 0 20px 0;
+	text-transform: uppercase;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.subtitle {
+	position: relative;
+}
+
+.subtitle h4 {
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: capitalize;
+}
+
+.subtitle .letter {
+	position: absolute;
+	top: -58px;
+	left: 0px;
+}
+
+.letter {
+	color: #fff;
+	font-size: 80px;
+	font-weight: bolder;
+	opacity: 0.1;
+	line-height: 1.5em;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.font1 {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.separator {
+	background-color: #ffd452;
+	border-radius: 3px;
+	height: 3px;
+	margin: 0 auto;
+	width: 100px;
+}
+
+/*common css for margin and padding Start*/
+.mat10 {
+	margin-top: 10px;
+}
+
+.mat30 {
+	margin-top: 30px;
+}
+
+.mat60 {
+	margin-top: 60px;
+}
+
+.mat70 {
+	margin-top: 70px;
+}
+
+/*common css for margin and padding End*/
+
+/*Hover delay or transition property and value Start*/
+header #menubar-area,
+.is-sticky #menubar-area,
+header #menubar-area .mainmenu .logo,
+header #menubar-area .mainmenu .menu-item ul li a,
+header #menubar-area .mainmenu .menu-item ul li a:hover,
+header #menubar-area .mainmenu .menu-item ul li a,
+.is-sticky #menubar-area .mainmenu .logo,
+.is-sticky #menubar-area .mainmenu .menu-item ul li a,
+.banner-area .banner-content .cv:hover,
+.banner-area .banner-content .cv,
+.banner-area .banner-content .hire:hover,
+.banner-area .banner-content .hire,
+.work-area .work-wrap #mixit-container .work-item .work-hover,
+.work-area .work-wrap #mixit-container .work-item:hover .work-hover,
+.contact form input[type="submit"]:hover,
+.contact form input[type="submit"],
+.social-links ul li a:hover,
+.social-links ul li a,
+#scrolltop:hover,
+#scrolltop {
+	transition: all linear 0.3s;
+	-ms-transition: all linear 0.3s;
+	-moz-transition: all linear 0.3s;
+	-webkit-transition: all linear 0.3s;
+	-o-transition: all linear 0.3s;
+}
+
+/*Hover delay or transition property and value End*/
+
+/* ---------------------------------------
+        Preload css area Start
+----------------------------------------- */
+
+#loader-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	overflow: hidden;
+}
+
+#loader {
+	display: block;
+	position: relative;
+	left: 52%;
+	top: 50%;
+	width: 100px;
+	height: 100px;
+	margin: -75px 0 0 -55px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	border-top-color: #ffd452;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+	z-index: 1001;
+}
+
+#loader:before {
+	content: "";
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	right: 5px;
+	bottom: 5px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	border-top-color: #fff;
+	-webkit-animation: spin 3s linear infinite;
+	animation: spin 3s linear infinite;
+}
+
+#loader:after {
+	content: "";
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	right: 15px;
+	bottom: 15px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	border-top-color: #ffd452;
+	-webkit-animation: spin 1.5s linear infinite;
+	animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+
+}
+
+@keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+
+}
+
+#loader-wrapper .loader-section {
+	position: fixed;
+	top: 0;
+	width: 51%;
+	height: 100%;
+	background: #222222;
+	z-index: 1000;
+	-webkit-transform: translateX(0);
+	-ms-transform: translateX(0);
+	transform: translateX(0);
+}
+
+#loader-wrapper .loader-section.section-left {
+	left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+	right: 0;
+}
+
+/* Loaded */
+.loaded #loader-wrapper .loader-section.section-left {
+	-webkit-transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
+	transform: translateX(-100%);
+	-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+	transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+	-webkit-transform: translateX(100%);
+	-ms-transform: translateX(100%);
+	transform: translateX(100%);
+	-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+	transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.loaded #loader {
+	opacity: 0;
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.loaded #loader-wrapper {
+	visibility: hidden;
+	-webkit-transform: translateY(-100%);
+	-ms-transform: translateY(-100%);
+	transform: translateY(-100%);
+	-webkit-transition: all 0.3s 1s ease-out;
+	transition: all 0.3s 1s ease-out;
+}
+
+/* JavaScript Turned Off */
+.no-js #loader-wrapper {
+	display: none;
+}
+
+/* ---------------------------------------
+    Preload css area End
+----------------------------------------- */
+
+/* ---------------------------------------
+    home section css Start
+----------------------------------------- */
+header {
+	position: relative;
+	height: 665px;
+	width: 100%;
+	overflow: hidden;
+}
+
+/*Menubar-area css Start*/
+header #menubar-area {
+	z-index: 10;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+/*Logo css Start*/
+header #menubar-area .mainmenu .logo {
+	width: 90px;
+	padding-top: 30px;
+}
+
+/*Logo css End*/
+
+/*Main Navbar css Start*/
+header #menubar-area .mainmenu .menu-item ul li a {
+	color: #fff;
+	text-transform: capitalize;
+	font-size: 15px;
+	padding: 40px 15px;
+}
+
+header #menubar-area .mainmenu .menu-item ul li a:hover {
+	color: #ffd452;
+	background: none;
+}
+
+header #menubar-area .mainmenu .menu-item ul li a:focus {
+	background: none;
+}
+
+/*Main Navbar css End*/
+
+/*Menubar-area css End*/
+
+/*sticky navbar css Start*/
+.is-sticky #menubar-area {
+	background: #000;
+	width: 100%;
+}
+
+.is-sticky #menubar-area .mainmenu .logo {
+	padding-top: 15px;
+}
+
+.is-sticky #menubar-area .mainmenu .menu-item ul li a {
+	padding: 25px 15px;
+}
+
+#menubar-area .mainmenu ul.nav.navbar-nav  li.active  a {
+	color: #ffd452;
+}
+
+/*sticky navbar css End*/
+
+/*banner area css Start*/
+.banner-area {
+	height: 100%;
+	width: 100%;
+	background: url(../img/banner.jpeg)no-repeat;
+	background-size: cover;
+	background-position: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	display: table;
+	text-align: center;
+	overflow: hidden;
+}
+
+.banner-area:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: "";
+	background: rgba(0, 0, 0, .7);
+}
+
+.banner-area .banner-text-container {
+	color: #fff;
+	height: 100%;
+	width: 100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.banner-area .banner-content h1 {
+	color: #fff;
+	font-weight: bolder;
+	padding-bottom: 10px;
+	letter-spacing: 5px;
+	color: #ffd452;
+}
+
+.banner-area .banner-content h4 {
+	padding-top: 15px;
+}
+
+.banner-area .banner-content a {
+	padding: 10px 20px;
+	font-size: 17px;
+	color: #323232;
+	margin: 20px 5px 0px 5px;
+	display: inline-block;
+}
+
+.banner-area .banner-content .cv {
+	background: #ffd452;
+}
+
+.banner-area .banner-content .cv:hover {
+	background: #323232;
+	color: #fff;
+}
+
+.banner-area .banner-content .hire {
+	background: #fff;
+}
+
+.banner-area .banner-content .hire:hover {
+	background: #323232;
+	color: #fff;
+}
+
+.banner-area .banner-content .scroller {
+	overflow: hidden;
+	font-size: 75px;
+	display: block;
+	text-transform: uppercase;
+	height: 80px;
+	line-height: 20px;
+	overflow: hidden;
+}
+
+.banner-area .banner-content .scroller p {
+	line-height: 91px;
+	font-weight: bold;
+}
+
+.banner-area .banner-content .scroller .inner {
+	animation: 10s normal infinite running scroll;
+}
+
+@keyframes scroll {
+	0% {
+		margin-top: 0px;
+	}
+
+	15% {
+		margin-top: 0px;
+	}
+
+	25% {
+		margin-top: -70pt;
+	}
+
+	40% {
+		margin-top: -70pt;
+	}
+
+	50% {
+		margin-top: -140pt;
+	}
+
+	65% {
+		margin-top: -140pt;
+	}
+
+	75% {
+		margin-top: -210pt;
+	}
+
+	90% {
+		margin-top: -210pt;
+	}
+
+	100% {
+		margin-top: 0px;
+	}
+
+}
+
+/*banner area css End*/
+
+/* ---------------------------------------
+    home section css End
+----------------------------------------- */
+
+/* ---------------------------------------
+    About Section css Start
+----------------------------------------- */
+
+.about {
+	background: #232323;
+}
+
+.about .about-img {
+	max-width: 360px;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.about .about-img .about-img-cap {
+	position: absolute;
+	top: -10%;
+	left: 50%;
+	width: 200px;
+	height: 300px;
+	border: 5px solid #ffd452;
+	text-align: center;
+	-webkit-transform: translateX(-48%);
+	-moz-transform: translateX(-48%);
+	-ms-transform: translateX(-48%);
+	-o-transform: translateX(-48%);
+	transform: translateX(-48%);
+}
+
+.about .about-img img {
+	width: 100%;
+}
+
+.about .about-content {
+	padding: 0 10px;
+}
+
+.about .about-content .about-text .about-heading {
+	margin-bottom: 20px;
+}
+
+.about .about-content .about-text .about-heading p {
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 26px;
+	color: #fff;
+}
+
+/*----------------------------------work plan css Start-------------------------------------------*/
+.about .about-content .about-text .work-plan {
+	margin-top: 70px;
+}
+
+.about .about-content .about-text .work-plan .work-plan-text {
+	margin-top: 20px;
+	width: 25%;
+	display: inline;
+	text-align: center;
+	position: relative;
+}
+
+.about .about-content .about-text .work-plan .work-plan-text .plan-separetor {
+	position: absolute;
+	top: 15px;
+	right: -7px;
+	display: inline-block;
+}
+
+.about .about-content .about-text .work-plan .work-plan-text .plan-separetor i {
+	font-size: 30px;
+	color: #ffd452;
+}
+
+.about .about-content .about-text .work-plan .work-plan-text i {
+	font-size: 60px;
+	color: #c3c3c3;
+}
+
+.about .about-content .about-text .work-plan .work-plan-text h4 {
+	font-size: 17px;
+	color: #fff;
+	padding-top: 10px;
+}
+
+/*----------------------------------work plan css End-------------------------------------------*/
+
+/* ---------------------------------------
+    About Section css End
+----------------------------------------- */
+
+/* ---------------------------------------
+    Services Section css Start
+----------------------------------------- */
+
+.services {
+	background: #2a2a2a;
+	cursor: cell;
+}
+
+.single-service {
+	width: 100%;
+}
+
+.single-service .service-icon {
+	width: 100%;
+	height: 110px;
+	position: relative;
+	text-align: center;
+}
+
+.single-service .service-icon i {
+	color: #fff;
+	font-size: 2.5em;
+	padding-top: 21px;
+}
+
+.single-service .service-icon h4 {
+	padding-top: 14px;
+	color: #fff;
+}
+
+.single-service .service-icon .service-icon-cap {
+	width: 100%;
+	height: 110px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 4px solid #ffd452;
+	padding-top: 34px;
+}
+
+.single-service .service-content {
+	padding: 10px 10px;
+	background: #424242;
+	font-size: 15px;
+	line-height: 26px;
+	color: #cbcbcb;
+}
+
+/*--------------------------------extra services css Start--------------------------------------*/
+.extra-item {
+	border: 4px solid #ffd452;
+	height: 60px;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.extra-item .ex-icon {
+	width: 50px;
+	height: 56px;
+	font-size: 30px;
+	line-height: 56px;
+	text-align: center;
+	background: #ffd452;
+	color: #424242;
+	z-index: 5;
+	display: inline-block;
+}
+
+.extra-item .ex-content {
+	width: 70%;
+}
+
+.extra-item .ex-content h4 {
+	text-align: center;
+	line-height: 51px;
+	color: #cbcbcb;
+}
+
+/*------------------------------------extra services css End---------------------------------------*/
+
+/* ---------------------------------------
+    Services Section css End
+----------------------------------------- */
+
+/* ---------------------------------------
+    FunFact Section css Start
+----------------------------------------- */
+.funfact {
+	background: #232323;
+}
+
+.funfact .fun-item {
+	text-align: center;
+}
+
+.funfact .fun-item .fun-icon {
+	height: 70px;
+	width: 70px;
+	text-align: center;
+	background: #ffd452;
+	border-radius: 50%;
+	margin: 0px auto;
+	position: relative;
+}
+
+.funfact .fun-item .fun-icon:after {
+	position: absolute;
+	top: 53px;
+	left: 46%;
+	width: 5px;
+	height: 40px;
+	background: #ffd452;
+	content: "";
+}
+
+.funfact .fun-item .fun-icon i {
+	font-size: 35px;
+	line-height: 70px;
+	color: #424242;
+}
+
+.funfact .fun-item .fun-count .counter {
+	font-size: 30px;
+	padding: 20px 0px;
+	display: inline-block;
+	color: #fff;
+}
+
+.funfact .fun-item .fun-title {
+	background: #ffd452;
+	width: 100%;
+	max-width: 250px;
+	height: 40px;
+	margin: 0px auto;
+	position: relative;
+}
+
+.funfact .fun-item .fun-title:after {
+	position: absolute;
+	bottom: 24px;
+	left: 48.8%;
+	width: 5px;
+	height: 40px;
+	background: #ffd452;
+	content: "";
+}
+
+.funfact .fun-item .fun-title h4 {
+	line-height: 40px;
+	color: #424242;
+	text-transform: capitalize;
+}
+
+/* ---------------------------------------
+    FunFact Section css End
+----------------------------------------- */
+
+/* ---------------------------------------
+    Work-Area Section css Start
+----------------------------------------- */
+.work-area {
+	background: #2a2a2a;
+}
+
+.work-area .work-wrap .work-control {
+	text-align: center;
+}
+
+.work-area .work-wrap .work-control button {
+	font-size: 15px;
+	background: none;
+	padding: 5px 5px;
+	margin-right: 5px;
+	color: #fff;
+}
+
+.work-area .work-wrap .work-control button:hover {
+	color: #ffd452;
+}
+
+.work-area .work-wrap .work-control button:focus {
+	color: #ffd452;
+	outline: 0px;
+}
+
+.work-area .work-wrap #mixit-container {
+	margin-top: 30px;
+}
+
+.work-area .work-wrap #mixit-container .work-item {
+	width: 33%;
+	position: relative;
+	cursor: zoom-in;
+}
+
+.work-area .work-wrap #mixit-container .work-item .work-img img {
+	width: 100%;
+}
+
+.work-area .work-wrap #mixit-container .work-item .work-hover {
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, .7);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding-top: 25%;
+	opacity: 0;
+}
+
+.work-area .work-wrap #mixit-container .work-item .work-hover .work-hover-text {
+	text-align: center;
+}
+
+.work-area .work-wrap #mixit-container .work-item .work-hover .work-hover-text h4 {
+	padding-bottom: 5px;
+	border-bottom: 3px solid #ffd452;
+	color: #fff;
+	display: inline-block;
+	opacity: 0;
+	-webkit-transform: scale(2.5, 2.5);
+	-moz-transform: scale(2.5, 2.5);
+	-ms-transform: scale(2.5, 2.5);
+	-o-transform: scale(2.5, 2.5);
+	transform: scale(2.5, 2.5);
+	transition: all linear 0.5s;
+	-webkit-transition: all linear 0.5s;
+	-moz-transition: all linear 0.5s;
+	-o-transition: all linear 0.5s;
+}
+
+.work-area .work-wrap #mixit-container .work-item:hover .work-hover {
+	opacity: 1;
+}
+
+.work-area .work-wrap #mixit-container .work-item .work-hover .work-hover-text p {
+	color: #fff;
+	opacity: 0;
+	padding-top: 50px;
+	transition: all linear 0.7s;
+	-webkit-transition: all linear 0.7s;
+	-moz-transition: all linear 0.7s;
+	-o-transition: all linear 0.7s;
+}
+
+.work-area .work-wrap #mixit-container .work-item:hover .work-hover .work-hover-text h4 {
+	opacity: 1;
+	-webkit-transform: scale(1.2, 1.2);
+	-moz-transform: scale(1.2, 1.2);
+	-ms-transform: scale(1.2, 1.2);
+	-o-transform: scale(1.2, 1.2);
+	transform: scale(1.2, 1.2);
+}
+
+.work-area .work-wrap #mixit-container .work-item:hover .work-hover .work-hover-text p {
+	padding-top: 10px;
+	opacity: 1;
+}
+
+/* ---------------------------------------
+    Work-Area Section css End
+----------------------------------------- */
+
+/* ---------------------------------------
+    Testimonial Section css Start
+----------------------------------------- */
+.testimonial {
+	background: #232323;
+}
+
+.testimonial .item {
+	position: relative;
+	cursor: move;
+}
+
+.testimonial .item .testimonial-img {
+	width: 300px;
+	height: 400px;
+	margin: 0 auto;
+}
+
+.testimonial .item .testimonial-img img {
+	width: 100%;
+	opacity: 0.3;
+}
+
+.testimonial .item .testimonial-text {
+	text-align: center;
+	padding: 0 10%;
+	position: absolute;
+	bottom: 30%;
+	left: 0px;
+}
+
+.testimonial .item .testimonial-text h3 {
+	font-size: 25px;
+	font-weight: bold;
+	color: #F39712;
+}
+
+.testimonial .item .testimonial-text p {
+	line-height: 26px;
+	padding-top: 30px;
+	color: #fff;
+	font-size: 15px;
+}
+
+.testimonial .owl-nav {
+	display: visible;
+	width: 62px;
+	margin: 0 auto;
+	font-size: 25px;
+}
+
+.testimonial .owl-nav .owl-prev {
+	float: left;
+	background: #ffd452;
+	padding: 0px 5px;
+	margin-right: 10px;
+	color: #232323;
+}
+
+.testimonial .owl-nav .owl-next {
+	float: left;
+	background: #ffd452;
+	padding: 0px 5px;
+	color: #232323;
+}
+
+.testimonial .item .testimonial-text span {
+	padding-top: 30px;
+	display: inline-block;
+	color: #a1a1a1;
+}
+
+/* ---------------------------------------
+    Testimonial Section css End
+----------------------------------------- */
+
+/* ---------------------------------------
+    Contact Section css Start
+----------------------------------------- */
+.contact {
+	background: #2a2a2a;
+	cursor: text;
+}
+
+.contact .contact-item {
+	text-align: center;
+}
+
+.contact .contact-item .contact-icon {
+	font-size: 40px;
+	color:;
+}
+
+.contact .contact-item .contact-icon i {
+	color: #fff;
+}
+
+.contact .contact-item .contact-text p {
+	font-size: 15px;
+	color: #fff;
+}
+
+.contact .contact-form {
+	border-radius: 3px;
+	margin-top: 30px;
+}
+
+.contact form input {
+	background: #545555;
+	width: 100%;
+	height: 50px;
+	padding-left: 10px;
+	font-size: 15px;
+	color: #fff;
+	margin-bottom: 15px;
+	border: 1px solid transparent;
+}
+
+.contact form textarea {
+	background: #545555;
+	width: 100%;
+	height: 100px;
+	padding-left: 10px;
+	font-size: 15px;
+	color: #fff;
+	border: 1px solid transparent;
+}
+
+.contact form input[type="submit"] {
+	width: 150px;
+	height: 40px;
+	background: #ffd452;
+	border: none;
+	color: #2a2a2a;
+	border: 1px solid transparent;
+	font-size: 17px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+.contact form input[type="submit"]:hover {
+	background: #000;
+	color: #a7a7a7;
+	border: 1px solid #ffd452;
+}
+
+.contact .contact-form form input:focus {
+	outline: 0px;
+	border: 1px solid #ffd452;
+}
+
+.contact .contact-form form textarea:focus {
+	outline: 0px;
+	border: 1px solid #ffd452;
+}
+
+/* ---------------------------------------
+    Contact Section css End
+----------------------------------------- */
+
+/* ---------------------------------------
+    Footer Section css Start
+----------------------------------------- */
+.footer {
+	background: #000;
+	text-align: center;
+	padding: 20px 0;
+}
+
+.footer p {
+	color: #fff;
+	padding-top: 10px;
+}
+
+.social-links ul {
+	padding: 0;
+	margin: 0;
+}
+
+.social-links ul li {
+	display: inline-block;
+}
+
+.social-links ul li a {
+	font-size: 25px;
+	color: #ffd452;
+	margin: 0px 10px;
+	display: block;
+}
+
+.social-links ul li a:hover {
+	color: #777777;
+}
+
+/* ---------------------------------------
+    Footer Section css End
+----------------------------------------- */
+
+/* ---------------------------------------
+    scroll to top animate css Start
+----------------------------------------- */
+#scrolltop {
+	background: transparent;
+	border: 2px solid #ffd452;
+	color: #ffd452;
+	height: 50px;
+	width: 50px;
+	text-align: center;
+	line-height: 60px;
+	position: fixed;
+	bottom: 20px;
+	right: 10px;
+	z-index: 99999;
+	display: none;
+	cursor: pointer;
+}
+
+#scrolltop:hover {
+	background: #ffd452;
+	color: #fff;
+}
+
+#scrolltop i {
+	font-size: 30px;
+}
+
+/* ---------------------------------------
+    scroll to top animate css End
+----------------------------------------- */
+
+/*============================================================================
+Home Page-2 css Start
+==============================================================================*/
+
+/*banner area css start*/
+#homepage-2 .banner-area {
+	background: url(../img/banner.jpeg)no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: 50%;
+}
+
+#homepage-2 .banner-area:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: "";
+	background: rgba(0, 0, 0, .7);
+}
+
+/*banner area css End*/
+
+/*funarea section css start*/
+#homepage-2 .funfact {
+	background: url(../img/funbg.jpeg)no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: 50%;
+	position: relative;
+}
+
+#homepage-2 .funfact:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: "";
+	background: rgba(0, 0, 0, .7);
+}
+
+/*funarea section css End*/
+
+/*contact area section css Start*/
+#homepage-2 .contact {
+	background: url(../img/contactbg.jpeg)no-repeat;
+	background-size: cover;
+	background-position: 50%;
+	background-attachment: fixed;
+	position: relative;
+}
+
+#homepage-2 .contact:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: "";
+	background: rgba(0, 0, 0, .7);
+}
+
+/*contact area section css End*/
+
+/*============================================================================
+Home Page-2 css End
+==============================================================================*/
+
+/*============================================================================
+Home Page-3 css Start
+==============================================================================*/
+
+/*portfolio light box (simple-overlay) css start*/
+#homepage-3 #loader-wrapper .loader-section {
+	background: #002e44;
+}
+
+/*portfolio light box (simple-overlay) css End*/
+
+/*is-sticky nav bar css Start*/
+#homepage-3 .is-sticky #menubar-area {
+	background: #002e44;
+}
+
+/*is-sticky nav bar css End*/
+
+/*section title css Start*/
+#homepage-3 .section-title h3 {
+	color: #002e44;
+}
+
+#homepage-3 .letter {
+	color: #002e44;
+}
+
+#homepage-3 .subtitle h4 {
+	color: #002e44;
+}
+
+/*section title css End*/
+
+/*banner area css start*/
+#homepage-3 .banner-area {
+	height: 100%;
+	width: 100%;
+	background: url(../img/banner.jpeg)no-repeat;
+	background-size: cover;
+	background-position: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	display: table;
+	text-align: center;
+	overflow: hidden;
+}
+
+#homepage-3 .banner-area:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: "";
+	background: rgba(0, 46, 68, .7);
+}
+
+/*banner area css End*/
+
+/*About Section css Start*/
+#homepage-3 .about {
+	background: #fff;
+}
+
+#homepage-3 .about .about-content .about-text .about-heading p {
+	color: #002e44;
+}
+
+#homepage-3 .about .about-content .about-text .work-plan .work-plan-text .plan-separetor i {
+	color: #ffd452;
+}
+
+#homepage-3 .about .about-content .about-text .work-plan .work-plan-text i {
+	color: #002e44;
+}
+
+#homepage-3 .about .about-content .about-text .work-plan .work-plan-text h4 {
+	color: #002e44;
+}
+
+/*About Section css End*/
+
+/* Services Section css Start*/
+
+#homepage-3 .services {
+	background: #f5f5f5;
+}
+
+#homepage-3 .single-service .service-icon i {
+	color: #002e44;
+}
+
+#homepage-3 .single-service .service-icon h4 {
+	color: #002e44;
+}
+
+#homepage-3 .single-service .service-content {
+	background: #002e44;
+	color: #fff;
+}
+
+/*--------------------------------extra services css start--------------------------------------*/
+#homepage-3 .extra-item .ex-icon {
+	color: #002e44;
+}
+
+#homepage-3 .extra-item .ex-content h4 {
+	color: #002e44;
+}
+
+/*------------------------------------extra services css end---------------------------------------*/
+
+/*Services Section css End*/
+
+/* FunFact Section css Start */
+#homepage-3 .funfact {
+	background: #002e44;
+}
+
+#homepage-3 .funfact .fun-item .fun-icon i {
+	color: #002e44;
+}
+
+#homepage-3 .funfact .fun-item .fun-title h4 {
+	color: #002e44;
+}
+
+/* FunFact Section css End */
+
+/* Work-Area Section Start */
+#homepage-3 .work-area {
+	background: #fff;
+}
+
+#homepage-3 .work-area .work-wrap .work-control button {
+	color: #002e44;
+}
+
+#homepage-3 .work-area .work-wrap #mixit-container .work-item .work-hover {
+	background: rgba(0, 46, 68, .7);
+}
+
+#homepage-3 .simple-overlay-bg {
+	background-color: #002e44;
+}
+
+/* Work-Area Section End */
+
+/*Testimonial Section css Start*/
+#homepage-3 .testimonial {
+	background: #f5f5f5;
+}
+
+#homepage-3 .testimonial .item .testimonial-img img {
+	opacity: 0.7;
+}
+
+#homepage-3 .testimonial .item .testimonial-text p {
+	color: #002e44;
+}
+
+#homepage-3 .testimonial .owl-nav .owl-prev {
+	color: #002e44;
+}
+
+#homepage-3 .testimonial .owl-nav .owl-next {
+	color: #002e44;
+}
+
+#homepage-3 .testimonial .item .testimonial-text span {
+	color: #002e44;
+}
+
+/*Testimonial Section css End*/
+
+/*contact Section css Start*/
+#homepage-3 .contact {
+	background: none;
+}
+
+#homepage-3 .contact .contact-item .contact-icon i {
+	color: #002e44;
+}
+
+#homepage-3 .contact .contact-item .contact-text p {
+	color: #002e44;
+}
+
+#homepage-3 .contact form input {
+	background: #dae9f0;
+	color: #002e44;
+}
+
+#homepage-3 .contact form textarea {
+	background: #dae9f0;
+	color: #002e44;
+}
+
+#homepage-3 .contact form input[type="submit"] {
+	background: #ffd452;
+	color: #002e44;
+}
+
+#homepage-3 .contact form input[type="submit"]:hover {
+	background: #002e44;
+	color: #ffd452;
+}
+
+/*contact Section css End*/
+
+/*footer section css start*/
+#homepage-3 .footer {
+	background: #002e44;
+}
+
+/*footer section css End*/
+
+/*============================================================================
+Home Page-3 css End
+==============================================================================*/
+
+/*============================================================================
+Home Page-4 css Start
+==============================================================================*/
+
+/*portfolio light box (simple-overlay) css start*/
+#homepage-4 #loader-wrapper .loader-section {
+	background: #002e44;
+}
+
+/*portfolio light box (simple-overlay) css End*/
+
+/*is-sticky nav bar css Start*/
+#homepage-4 .is-sticky #menubar-area {
+	background: #002e44;
+}
+
+/*is-sticky nav bar css End*/
+
+/*section title css Start*/
+#homepage-4 .section-title h3 {
+	color: #002e44;
+}
+
+#homepage-4 .letter {
+	color: #002e44;
+}
+
+#homepage-4 .subtitle h4 {
+	color: #002e44;
+}
+
+/*section title css End*/
+
+/*banner area css start*/
+#homepage-4 .banner-area {
+	height: 100%;
+	width: 100%;
+	background: url(../img/banner.jpeg)no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	display: table;
+	text-align: center;
+	overflow: hidden;
+}
+
+#homepage-4 .banner-area:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: "";
+	background: rgba(0, 46, 68, .7);
+}
+
+/*banner area css End*/
+
+/*About Section css Start*/
+#homepage-4 .about {
+	background: #fff;
+}
+
+#homepage-4 .about .about-content .about-text .about-heading p {
+	color: #002e44;
+}
+
+#homepage-4 .about .about-content .about-text .work-plan .work-plan-text .plan-separetor i {
+	color: #ffd452;
+}
+
+#homepage-4 .about .about-content .about-text .work-plan .work-plan-text i {
+	color: #002e44;
+}
+
+#homepage-4 .about .about-content .about-text .work-plan .work-plan-text h4 {
+	color: #002e44;
+}
+
+/*About Section css End*/
+
+/* Services Section css Start*/
+
+#homepage-4 .services {
+	background: #f5f5f5;
+}
+
+#homepage-4 .single-service .service-icon i {
+	color: #002e44;
+}
+
+#homepage-4 .single-service .service-icon h4 {
+	color: #002e44;
+}
+
+#homepage-4 .single-service .service-content {
+	background: #002e44;
+	color: #fff;
+}
+
+/*--------------------------------extra services css start--------------------------------------*/
+#homepage-4 .extra-item .ex-icon {
+	color: #002e44;
+}
+
+#homepage-4 .extra-item .ex-content h4 {
+	color: #002e44;
+}
+
+/*------------------------------------extra services css end---------------------------------------*/
+
+/*Services Section css End*/
+
+/* FunFact Section css Start */
+#homepage-4 .funfact {
+	background: url(../img/funbg.jpeg)no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: 50%;
+	position: relative;
+}
+
+#homepage-4 .funfact:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: "";
+	background: rgba(0, 46, 68, .7);
+}
+
+#homepage-4 .funfact .fun-item .fun-icon i {
+	color: #002e44;
+}
+
+#homepage-4 .funfact .fun-item .fun-title h4 {
+	color: #002e44;
+}
+
+/* FunFact Section css End */
+
+/* Work-Area Section Start */
+#homepage-4 .work-area {
+	background: #fff;
+}
+
+#homepage-4 .work-area .work-wrap .work-control button {
+	color: #002e44;
+}
+
+#homepage-4 .work-area .work-wrap #mixit-container .work-item .work-hover {
+	background: rgba(0, 46, 68, .7);
+}
+
+#homepage-4 .simple-overlay-bg {
+	background-color: #002e44;
+}
+
+/* Work-Area Section End */
+
+/*Testimonial Section css Start*/
+#homepage-4 .testimonial {
+	background: #f5f5f5;
+}
+
+#homepage-4 .testimonial .item .testimonial-img img {
+	opacity: 0.7;
+}
+
+#homepage-4 .testimonial .item .testimonial-text p {
+	color: #002e44;
+}
+
+#homepage-4 .testimonial .owl-nav .owl-prev {
+	color: #002e44;
+}
+
+#homepage-4 .testimonial .owl-nav .owl-next {
+	color: #002e44;
+}
+
+#homepage-4 .testimonial .item .testimonial-text span {
+	color: #002e44;
+}
+
+/*Testimonial Section css End*/
+
+/*contact Section css Start*/
+#homepage-4 .contact {
+	background: url(../img/contactbg.jpeg)no-repeat;
+	background-size: cover;
+	background-position: 50%;
+	background-attachment: fixed;
+	cursor: text;
+	position: relative;
+}
+
+#homepage-4 .contact:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: "";
+	background: rgba(0, 46, 68, .7);
+}
+
+#homepage-4 .contact .section-title h3 {
+	color: #fff;
+}
+
+#homepage-4 .contact .contact-item .contact-icon i {
+	color: #fff;
+}
+
+#homepage-4 .contact .contact-item .contact-text p {
+	color: #fff;
+}
+
+#homepage-4 .contact form input {
+	background: #dae9f0;
+	color: #002e44;
+}
+
+#homepage-4 .contact form textarea {
+	background: #dae9f0;
+	color: #002e44;
+}
+
+#homepage-4 .contact form input[type="submit"] {
+	background: #ffd452;
+	color: #002e44;
+}
+
+#homepage-4 .contact form input[type="submit"]:hover {
+	background: #002e44;
+	color: #ffd452;
+}
+
+/*contact Section css End*/
+
+/*footer section css start*/
+#homepage-4 .footer {
+	background: #002e44;
+}
+
+/*footer section css End*/
+
+/*============================================================================
+Home Page-3 css End
+==============================================================================*/

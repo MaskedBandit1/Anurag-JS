@@ -1,0 +1,222 @@
+@media only screen and (min-width:992px) and (max-width:1199px) {
+	.container {
+		width: 970px;
+		margin: 0 auto;
+	}
+
+}
+
+/* Tablet Device */
+@media only screen and (min-width:768px) and (max-width:991px) {
+	.container {
+		width: 750px;
+		margin: 0 auto;
+	}
+
+	.banner-area .banner-content {
+		color: #fff;
+		padding: 28% 0%;
+		height: 100%;
+		width: 100%;
+		margin: 0px auto;
+	}
+
+	/* About Section */
+	.about .about-img .about-img-cap {
+		height: 220px;
+		width: 150px;
+	}
+	/*service section*/
+	.services .resm30{margin-top:30px;}
+	
+	/* FunFact Section */
+	.funfact .fun-item {
+		margin-bottom: 30px;
+	}
+
+	/* Work Area */
+	.work-area .work-wrap .mixit-container .work-item {
+		height: auto;
+		width: 50%;
+	}
+
+}
+
+/* Mobile Device - Portait */
+@media only screen and (max-width:767px) {
+
+	/* Subtitle common css*/
+	.subtitle {
+		text-align: center;
+	}
+
+	.subtitle .letter {
+		left: 46%;
+	}
+
+	/* Home Section */
+	.navbar-toggle {
+		margin-top: 14px;
+	}
+
+	.navbar-toggle .icon-bar {
+		background: #ffd452;
+	}
+
+	header #menubar-area .mainmenu .logo {
+		padding-top: 13px;
+		padding-bottom: 10px;
+	}
+
+	.navbar-collapse {
+		width: 100%;
+		background: #363636;
+		text-align: center;
+	}
+	#homepage-3 .navbar-collapse {
+		background: #002e44;
+	}
+	#homepage-4 .navbar-collapse {
+		background: #002e44;
+	}
+
+	header #menubar-area .mainmenu .menu-item ul li a {
+		padding: 20px 15px;
+	}
+
+	.is-sticky #menubar-area .mainmenu .menu-item ul li a {
+		padding: 20px 15px;
+	}
+
+	.banner-area .banner-content {
+		padding: 31% 0px;
+	}
+
+	.banner-area .banner-content h1 {
+		padding-bottom: 0px;
+		font-size: 26px;
+	}
+
+	.banner-area .banner-content .scroller {
+		font-size: 35px;
+	}
+
+	.banner-area .banner-content h4 {
+		padding-top: 0px;
+		font-size: 16px;
+		line-height: 26px;
+	}
+
+	/* About Section */
+	.about .about-content {
+		margin-top: 40px;
+	}
+
+	.about .about-content .about-text .about-heading p {
+		text-align: justify;
+	}
+
+	.about .about-content .about-text .work-plan .work-plan-text {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
+	.about .about-content .about-text .work-plan .work-plan-text:last-child {
+		margin-bottom: 0px;
+	}
+
+	.about .about-content .about-text .work-plan .work-plan-text i {
+		font-size: 40px;
+	}
+
+	.about .about-content .about-text .work-plan .work-plan-text .plan-separetor {
+		top: 118%;
+		right: 0;
+		width: 100%;
+		text-align: center;
+	}
+
+	.about .about-content .about-text .work-plan .work-plan-text .plan-separetor i {
+		top: 118%;
+		right: 48.80%;
+		display: inline-block;
+		transform: rotate(90deg);
+		-webkit-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+	}
+
+	/* Services Section */
+	.single-service {
+		max-width: 320px;
+		margin: 0 auto 30px auto;
+	}
+
+	.extra-item {
+		max-width: 320px;
+		margin: 30px auto auto;
+	}
+
+	/* FunFact Section */
+	.funfact .fun-item {
+		margin-bottom: 30px;
+	}
+
+	/* Work Area */
+	.work-area .work-wrap #mixit-container .work-item {
+		height: auto;
+		width: 100%;
+	}
+
+	.work-area .work-wrap #mixit-container .work-item .work-hover {
+		padding-top: 25%;
+	}
+
+	.simple-overlay figure {
+		height: auto;
+		margin-top: 125px;
+		width: 100% !important;
+	}
+
+	/* Testimonial */
+	.testimonial .item .testimonial-text {
+		bottom: 24%;
+	}
+
+	.testimonial .owl-nav {
+		width: 58px;
+	}
+
+	.testimonial .owl-nav .owl-prev {
+		margin-right: 5px;
+	}
+
+	/* Contact Area */
+	.contact-form {
+		text-align: center;
+	}
+
+}
+
+/* Mobile Device - Landscape */
+@media only screen and (min-width:320px) and (max-width:480px) {
+
+	/* Subtitle common css*/
+	.subtitle {
+		text-align: center;
+	}
+
+	.subtitle .letter {
+		left: 44%;
+	}
+
+	/* Home Section */
+	header {
+		height: 550px;
+	}
+
+	.banner-area .banner-content {
+		padding: 47% 0px;
+	}
+
+}
